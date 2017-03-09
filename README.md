@@ -55,3 +55,7 @@ readability and maintainability, I would appreciate to get teached in your wisdo
 2. Major Updates - If something bigger will be implemented and/or the script is not backward compatible anymore, this will increase
 3. Minor Updates - This will be the one that indicates that we improved without and you can update without fear of problems!
 4. Fast Updates - Every now and then I will do some small changes.. maybe I forgot a semicolon or I wanted to add/remove a blank line.. I do not recommend updating further than to 0 (example do: 1.4.11.0, do not: 1.4.11.4)
+
+# Contact
+
+Cagatay Ulubay [<caga.ulu@gmail.com>](mailto://caga.ulu@gmail.com)
