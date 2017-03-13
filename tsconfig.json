@@ -4,5 +4,17 @@
 * Basic config file to automatically parse ES6 to ES5 compatible code
 */
 {
-
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es5",
+        // Remove Slashes to generate on big file //"outFile": "dist/secondcure.js",
+        "outDir": "dist"
+    },
+    "include": [
+        "src/**/*"
+    ]
 }
