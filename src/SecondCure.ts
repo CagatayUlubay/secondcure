@@ -4,7 +4,7 @@
  *
  * @author      Cagatay Ulubay <caga.ulu@gmail.com>
  * @copyright   DevMonks
- * @version     0.0.0.1
+ * @version     0.0.0.2
  */
 class SecondCure {
 
