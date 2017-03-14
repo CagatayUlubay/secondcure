@@ -23,7 +23,7 @@ class SecondCure {
             if (result) {
                 weight += observer.weight;
             } else {
-                weight -= observer.observer;
+                weight -= observer.weight;
             }
         });
 

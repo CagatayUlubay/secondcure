@@ -5,7 +5,7 @@ class MinimumLength implements ObserverInterface {
 
     constructor(minimumLength:number, weight:number) {
         this._mininumLength = minimumLength;
-        this._weight = weight
+        this._weight = weight;
     }
 
     validate(password:string) {
