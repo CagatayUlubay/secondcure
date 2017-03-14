@@ -5,11 +5,13 @@
 */
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "compileOnSave": true,
+        "module": "CommonJS",
         "noImplicitAny": false,
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true,
+        "charset": "utf-8",
         "target": "es5",
         // Remove Slashes to generate on big file //"outFile": "dist/secondcure.js",
         "outDir": "dist"
