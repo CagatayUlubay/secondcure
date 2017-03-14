@@ -8,22 +8,33 @@
  */
 class SecondCure {
 
-    _passwordElement;
-    _observer;
+    _observer:ObserverInterface[];
 
-    constructor(passwordElement) {
-        this._passwordElement = passwordElement;
-    }
-
-    validate() {
-        console.log(this._passwordElement);
-    }
-
-    set observer(observer) {
+    constructor(observer:ObserverInterface[]) {
         this._observer = observer;
     }
 
-    get observer() {
+    validate(password:string) {
+
+        let weight = 0;
+
+        this._observer.forEach((observer) => {
+            let result = observer.validate(password);
+            if (result) {
+                weight += observer.weight;
+            } else {
+                weight -= observer.observer;
+            }
+        });
+
+        return weight;
+    }
+
+    set observer(observer:ObserverInterface[]) {
+        this._observer = observer;
+    }
+
+    get observer() : ObserverInterface[] {
         return this._observer;
     }
 }
