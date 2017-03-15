@@ -1,23 +1,18 @@
-class MaximumLength implements ObserverInterface {
+/// <reference path="../AbstractObserver.ts" />
+
+class MaximumLength extends AbstractObserver {
     _name:string = "MaximumLength";
     _maximumLength:number;
-    _weight:number;
 
-    constructor(maximumLength:number, weight:number) {
+    constructor(maximumLength:number, weight:number, penalty:number = 0) {
+        super();
         this._maximumLength = maximumLength;
-        this._weight = weight;
+        this._weight        = weight;
+        this._penalty       = penalty;
     }
 
     validate(password:string) {
         return password.length <= this._maximumLength;
-    }
-
-    set name(name:string) {
-        this._name = name;
-    }
-
-    get name() {
-        return this._name;
     }
 
     set maximumLength(maximumLength:number) {
@@ -26,13 +21,5 @@ class MaximumLength implements ObserverInterface {
 
     get maximumLength() {
         return this._maximumLength;
-    }
-
-    set weigth(weight:number) {
-        this._weight = weight;
-    }
-
-    get weight() {
-        return this._weight;
     }
 }

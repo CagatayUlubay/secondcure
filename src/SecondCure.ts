@@ -1,3 +1,4 @@
+/// <reference path="./AbstractObserver.ts" />
 "use strict";
 /**
  * SecondCure Password Strength Indicator
@@ -8,9 +9,9 @@
  */
 class SecondCure {
 
-    _observer:ObserverInterface[];
+    _observer:AbstractObserver[];
 
-    constructor(observer:ObserverInterface[]) {
+    constructor(observer:AbstractObserver[]) {
         this._observer = observer;
     }
 
@@ -20,21 +21,24 @@ class SecondCure {
 
         this._observer.forEach((observer) => {
             let result = observer.validate(password);
+
             if (result) {
                 weight += observer.weight;
             } else {
-                weight -= observer.weight;
+                weight -= observer.penalty;
             }
+
+            console.log(observer.name, "Weight: " , observer.weight, "Penalty: ", observer.penalty);
         });
 
         return weight;
     }
 
-    set observer(observer:ObserverInterface[]) {
+    set observer(observer:AbstractObserver[]) {
         this._observer = observer;
     }
 
-    get observer() : ObserverInterface[] {
+    get observer() : AbstractObserver[] {
         return this._observer;
     }
 }

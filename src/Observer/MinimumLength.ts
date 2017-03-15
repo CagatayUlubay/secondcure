@@ -1,23 +1,18 @@
-class MinimumLength implements ObserverInterface {
+/// <reference path="../AbstractObserver.ts" />
+
+class MinimumLength extends AbstractObserver {
     _name:string = "MinimumLength";
     _mininumLength:number;
-    _weight:number;
 
-    constructor(minimumLength:number, weight:number) {
+    constructor(minimumLength:number, weight:number, penalty:number = 0) {
+        super();
         this._mininumLength = minimumLength;
-        this._weight = weight;
+        this._weight        = weight;
+        this._penalty       = penalty;
     }
 
     validate(password:string) {
         return password.length >= this._mininumLength;
-    }
-
-    set name(name:string) {
-        this._name = name;
-    }
-
-    get name() {
-        return this._name;
     }
 
     set minimumLength(minimumLength:number) {
@@ -26,13 +21,5 @@ class MinimumLength implements ObserverInterface {
 
     get minimumLength() {
         return this._mininumLength;
-    }
-
-    set weigth(weight:number) {
-        this._weight = weight;
-    }
-
-    get weight() {
-        return this._weight;
     }
 }
