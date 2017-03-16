@@ -7,13 +7,13 @@ class Repeating extends AbstractObserver {
     constructor(threshold:number, weight:number = 0, penalty:number = 0) {
         super();
         this._threshold = threshold;
-        this._weight = weight;
-        this._penalty = penalty;
+        this._weight    = weight;
+        this._penalty   = penalty;
     }
 
     validate(password:string) {
         let regex = new RegExp("(.)\\1{" + (this._threshold-1) + ",}");
-        return !regex.test(password);
+        return !regex.test(password) ? this._weight : this._penalty;
     }
 
     set threshold(threshold:number) {

@@ -20,15 +20,7 @@ class SecondCure {
         let weight = 0;
 
         this._observer.forEach((observer) => {
-            let result = observer.validate(password);
-
-            if (result) {
-                weight += observer.weight;
-            } else {
-                weight -= observer.penalty;
-            }
-
-            console.log(observer.name, "Weight: " , observer.weight, "Penalty: ", observer.penalty);
+            weight += observer.validate(password);
         });
 
         return weight;

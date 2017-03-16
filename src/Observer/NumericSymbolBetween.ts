@@ -1,7 +1,7 @@
 /// <reference path="../AbstractObserver.ts" />
 
-class Symbolic extends AbstractObserver {
-    _name:string = "Symbolic";
+class NumericSymbolBetween extends AbstractObserver {
+    _name:string = "NumericSymbolBetween";
 
     constructor(weight:number = 0, penalty:number = 0) {
         super();
@@ -10,10 +10,10 @@ class Symbolic extends AbstractObserver {
     }
 
     validate(password:string) {
-        // Todo: Maybe given as parameter so the user can choose which symbols he allows (or this has to be a manual extra check?)
 
-        let regEx = new RegExp("[^a-zA-Z0-9]+", "g");
-        let match = password.match(regEx);
+        let regEx = new RegExp("[^a-zA-Z]+", "g");
+        let match = (password.substr(1, password.length-2)).match(regEx);
+        console.log("Match: " , match,regEx, password.substr(1, password.length-2));
         return match ? (match.length * this._weight) : this._penalty;
     }
 }

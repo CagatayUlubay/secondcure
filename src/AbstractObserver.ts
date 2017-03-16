@@ -6,13 +6,13 @@ abstract class AbstractObserver implements ObserverInterface {
     constructor() {}
     get weight():number {
         return this._weight;
-    };
+    }
     set weight(weight:number) {
         this._weight = weight;
     }
     get penalty():number {
         return this._penalty;
-    };
+    }
     set penalty(penalty:number) {
         this._penalty = penalty;
     }

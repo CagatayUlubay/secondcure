@@ -12,7 +12,7 @@ class MaximumLength extends AbstractObserver {
     }
 
     validate(password:string) {
-        return password.length <= this._maximumLength;
+        return password.length <= this._maximumLength ? this._weight : this._penalty;
     }
 
     set maximumLength(maximumLength:number) {

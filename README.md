@@ -19,13 +19,14 @@ and increasing the range of possible characters.
 - Numeric (0-9) (#done)
 - Symbolic (!$&/()=?,.-;:_) (#done)
 - AlphaNumeric (a-zA-Z0-9) (#done) (#done)
-- AlphaSymbolic (a-zA-Z!$&/()=?,.-;:_)
+- AlphaSymbolic (a-zA-Z!$&/()=?,.-;:_) (#done)
 - NumSymbolic (0-9!$&/()=?,.-;:_) (#done)
 - Repeating (aaa, 999, abc, 456) (#done)
 - Consecutively (abc, 123, stv, 789) (#done)
-- Dictionary (RainbowTable API, List of Array, etc.) -> ToBeFurtherDiscussed!
+- Dictionary (RainbowTable API, List of Array, etc.) -> ToBeFurtherDiscussed! (#partlydone)
 - Uppercase (#done)
 - Lowercase (#done)
+- Combination (Combine two or more Observer)
 - ..
 - Open for ideas
 

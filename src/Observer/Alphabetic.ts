@@ -10,6 +10,6 @@ class Alphabetic extends AbstractObserver {
     }
 
     validate(password:string) {
-        return /[a-zA-Z]/.test(password);
+        return /[a-zA-Z]/.test(password) ? this._weight : this._penalty;
     }
 }

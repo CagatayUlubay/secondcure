@@ -11,6 +11,6 @@ class NumericSymbolic extends AbstractObserver {
 
     validate(password:string) {
         // Todo: Maybe given as parameter so the user can choose which symbols he allows (or this has to be a manual extra check?)
-        return /[0-9]/.test(password) && /[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/.test(password);
+        return /[0-9]/.test(password) && /[-!$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/.test(password) ? this._weight : this._penalty;
     }
 }

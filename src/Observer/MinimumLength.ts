@@ -12,7 +12,7 @@ class MinimumLength extends AbstractObserver {
     }
 
     validate(password:string) {
-        return password.length >= this._mininumLength;
+        return password.length >= this._mininumLength ? this._weight : this._penalty;
     }
 
     set minimumLength(minimumLength:number) {

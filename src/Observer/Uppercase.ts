@@ -10,6 +10,8 @@ class Uppercase extends AbstractObserver {
     }
 
     validate(password:string) {
-        return /[A-Z]/.test(password);
+        let regEx = new RegExp("[A-Z]", "g");
+        let match = password.match(regEx);
+        return match ? ((password.length-match.length) * this._weight) : this._penalty;
     }
 }
