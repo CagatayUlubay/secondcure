@@ -4,7 +4,7 @@ class MaximumLength extends AbstractObserver {
     _name:string = "MaximumLength";
     _maximumLength:number;
 
-    constructor(maximumLength:number, weight:number, penalty:number = 0) {
+    constructor(maximumLength:number, weight:number = 0, penalty:number = 0) {
         super();
         this._maximumLength = maximumLength;
         this._weight        = weight;

@@ -3,7 +3,7 @@
 class Consecutively extends AbstractObserver {
     _name:string = "Consecutively";
 
-    constructor(weight:number, penalty:number = 0) {
+    constructor(weight:number = 0, penalty:number = 0) {
         super();
         this._weight = weight;
         this._penalty = penalty;

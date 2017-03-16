@@ -11,20 +11,21 @@ You never can consider a password is safe, no matter how complex it is.
 There are best practices to decrease the chances a lot by increasing the complexity
 and increasing the range of possible characters.
 
-# Aviable validators
+# Aviable observer
 
-- Minimum string length
-- Maximum string length
-- Alphabetic (a-zA-Z)
-- Numeric (0-9)
-- Symbolic (!$&/()=?,.-;:_)
-- AlphaNumeric (a-zA-Z0-9)
+- Minimum string length (#done)
+- Maximum string length (#done)
+- Alphabetic (a-zA-Z) (#done)
+- Numeric (0-9) (#done)
+- Symbolic (!$&/()=?,.-;:_) (#done)
+- AlphaNumeric (a-zA-Z0-9) (#done) (#done)
 - AlphaSymbolic (a-zA-Z!$&/()=?,.-;:_)
-- NumSymbolic (0-9!$&/()=?,.-;:_)
-- Sequence (aaa, 999, abc, 456)
+- NumSymbolic (0-9!$&/()=?,.-;:_) (#done)
+- Repeating (aaa, 999, abc, 456) (#done)
+- Consecutively (abc, 123, stv, 789) (#done)
 - Dictionary (RainbowTable API, List of Array, etc.) -> ToBeFurtherDiscussed!
-- Uppercase
-- Lowercase
+- Uppercase (#done)
+- Lowercase (#done)
 - ..
 - Open for ideas
 

@@ -4,7 +4,7 @@ class Repeating extends AbstractObserver {
     _name:string = "Repeating";
     _threshold:number;
 
-    constructor(threshold:number, weight:number, penalty:number = 0) {
+    constructor(threshold:number, weight:number = 0, penalty:number = 0) {
         super();
         this._threshold = threshold;
         this._weight = weight;
