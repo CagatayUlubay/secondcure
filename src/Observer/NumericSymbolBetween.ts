@@ -13,7 +13,6 @@ class NumericSymbolBetween extends AbstractObserver {
 
         let regEx = new RegExp("[^a-zA-Z]+", "g");
         let match = (password.substr(1, password.length-2)).match(regEx);
-        console.log("Match: " , match,regEx, password.substr(1, password.length-2));
         return match ? (match.length * this._weight) : this._penalty;
     }
 }
