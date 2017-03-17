@@ -3,13 +3,16 @@
 class AlphaNumeric extends AbstractObserver {
     _name:string = "AlphaNumeric";
 
-    constructor(weight:number = 0, penalty:number = 0) {
+    constructor(weight:number = 0) {
         super();
         this._weight        = weight;
-        this._penalty       = penalty;
     }
 
     validate(password:string) {
-        return /[a-zA-Z]/.test(password) && /[0-9]/.test(password) ? this._weight : this._penalty;
+        return /[a-zA-Z]/.test(password) && /[0-9]/.test(password);
+    }
+
+    score(password:string) {
+        return password.length * this._weight;
     }
 }

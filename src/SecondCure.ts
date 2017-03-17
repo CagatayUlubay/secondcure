@@ -5,7 +5,7 @@
  *
  * @author      Cagatay Ulubay <caga.ulu@gmail.com>
  * @copyright   DevMonks
- * @version     0.0.0.2
+ * @version     0.0.1.0
  */
 class SecondCure {
 
@@ -17,10 +17,16 @@ class SecondCure {
 
     validate(password:string) {
 
+        if (password.length === 0) {
+            return 0;
+        }
+
         let weight = 0;
 
         this._observer.forEach((observer) => {
-            weight += observer.validate(password);
+            if (observer.validate(password)) {
+                weight += observer.score(password);
+            }
         });
 
         return weight;

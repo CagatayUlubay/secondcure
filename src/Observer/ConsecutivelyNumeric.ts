@@ -1,7 +1,7 @@
 /// <reference path="../AbstractObserver.ts" />
 
-class Numeric extends AbstractObserver {
-    _name:string = "Numeric";
+class ConsecutivelyNumeric extends AbstractObserver {
+    _name:string = "ConsecutivelyNumeric";
 
     constructor(weight:number = 0) {
         super();
@@ -9,14 +9,14 @@ class Numeric extends AbstractObserver {
     }
 
     validate(password:string) {
-        let regEx = new RegExp("([^0-9]+[0-9]+|[0-9]+[^0-9]+)", "g");
+        let regEx = new RegExp("(?=([0-9]{2}))", "g");
         let match = password.match(regEx);
         return !!match;
     }
 
     score(password:string) {
-        let regEx = new RegExp("[0-9]", "g");
+        let regEx = new RegExp("(?=([0-9]{2}))", "g");
         let match = password.match(regEx);
-        return match ? match.length * this._weight : 0;
+        return match ? -(match.length * this._weight) : 0;
     }
 }

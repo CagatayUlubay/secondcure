@@ -3,13 +3,17 @@
 class Alphabetic extends AbstractObserver {
     _name:string = "Alphabetic";
 
-    constructor(weight:number = 0, penalty:number = 0) {
+    constructor(weight:number = 0) {
         super();
         this._weight        = weight;
-        this._penalty       = penalty;
     }
 
     validate(password:string) {
-        return /[a-zA-Z]/.test(password) ? this._weight : this._penalty;
+        return /[a-zA-Z]/.test(password);
+    }
+
+    score(password:string) {
+        let match = password.match(/[a-zA-Z]/);
+        return !!match ? match.length * this._weight : 0;
     }
 }

@@ -4,15 +4,14 @@ class MaximumLength extends AbstractObserver {
     _name:string = "MaximumLength";
     _maximumLength:number;
 
-    constructor(maximumLength:number, weight:number = 0, penalty:number = 0) {
+    constructor(maximumLength:number, weight:number = 0) {
         super();
         this._maximumLength = maximumLength;
         this._weight        = weight;
-        this._penalty       = penalty;
     }
 
     validate(password:string) {
-        return password.length <= this._maximumLength ? this._weight : this._penalty;
+        return password.length <= this._maximumLength;
     }
 
     set maximumLength(maximumLength:number) {
@@ -21,5 +20,9 @@ class MaximumLength extends AbstractObserver {
 
     get maximumLength() {
         return this._maximumLength;
+    }
+
+    score(password:string) {
+        return this._weight;
     }
 }
