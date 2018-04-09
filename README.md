@@ -4,7 +4,7 @@ Sec(ond)[C]ure Password Strength indicator
 Recently I struggled to find a password strength indicator that would work in the dynamic way I prefer.
 So I decided it could be funny way to improve my Javascript skills and [git gut](http://knowyourmeme.com/memes/git-gud) in terms of ECMAScript6 (ES6).
 
-## Warning: This project is in a old state and is changes heavly from the original state. The initial concept lacked of a good strength indicator, so after researching for a valid way to improve the validity, I changed a lot of the intern checks and indicator calculations. Since this code is now used within the company environment, the code won't be public anymore. I don't planing in adjusting this version or doing a new version.
+## Warning: This project is in a old state and is changed heavly from the original state. The initial concept lacked of a good strength indicator, so after researching for a valid way to improve the validity, I changed a lot of the intern checks and indicator calculations. Since this code is now used within the company environment, the code won't be public anymore. I don't planing in adjusting this version or doing a new version.
 
 # Strength Indicator
 
